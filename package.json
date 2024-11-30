@@ -1,0 +1,17 @@
+{
+  "name": "optimal-gains-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "json2csv": "^6.0.0-alpha.2",
+    "lodash": "^4.17.21"
+  }
+}
