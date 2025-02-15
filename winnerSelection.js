@@ -74,16 +74,15 @@ async function main() {
                 
     let optimalGains = {};
     
-    for (let i = 0; i < fuePaths.length ; i++) {
+    for (let i = 0; i < 1 ; i++) {
 		console.log(i)
-        const csvFueFilePath = fuePaths[i];
-        const csvTeFilePath = tePaths[i];
+        const csvFueFilePath = fuePaths[500];
+        const csvTeFilePath = tePaths[500];
         const matches = csvTeFilePath.match(/(\d+)_(\d+)\.csv$/);
-        const iter = matches ? parseInt(matches[2]) : null;
 
-		const match = csvTeFilePath.match(/Te_(\d{2})(\d{2})_\d+/);
-        const lengthFueList = parseInt(match[2], 10);
-        const lengthMueList = parseInt(match[1], 10);
+        const iter = matches ? parseInt(matches[2]) : null;
+        const lengthFueList = parseInt(matches[1].slice(2));
+        const lengthMueList = parseInt(matches[1].slice(0,2));
 
         const dataFue = await csv().fromFile(csvFueFilePath);
 
